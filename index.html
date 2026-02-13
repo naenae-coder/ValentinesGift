@@ -229,6 +229,13 @@ And I choose you — today and every day after. 🥹</div>
       setTimeout(() => confetti.remove(), 3000);
     }
   }
+  
+window.addEventListener('load', () => {
+  const audio = document.getElementById('loveSong');
+  audio.play().catch(() => {
+    console.log("Autoplay blocked, waiting for user interaction");
+  });
+});  
 </script>
 
 </body>
